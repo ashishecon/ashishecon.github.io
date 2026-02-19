@@ -14,26 +14,32 @@
             line-height: 1.6;
         }
 
-        .navbar {
-            background-color: white;
-            padding: 20px 60px;
-            border-bottom: 1px solid #ccc;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+       .navbar {
+    background-color: white;
+    padding: 20px 60px;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+}
 
-        .navbar h1 {
-            margin: 0;
-            font-size: 28px;
-        }
+.navbar h1 {
+    margin: 0;
+    font-size: 28px;
+}
 
-        .navbar a {
-            margin-left: 25px;
-            text-decoration: none;
-            color: black;
-            font-size: 18px;
-        }
+.navbar div {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 22px;
+}
+
+.navbar a {
+    margin: 0 20px;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+ 
 
         .container {
             display: flex;
