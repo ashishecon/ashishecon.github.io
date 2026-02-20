@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Fieldwork | Ashish Adhikari</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: Georgia, serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            background-color: white;
+            padding: 20px 60px;
+            border-bottom: 1px solid #ccc;
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar h1 {
+            margin: 0;
+            font-size: 28px;
+            padding-left: 100px;
+        }
+
+        .navbar h1 a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .navbar div {
+            margin: 0 auto;
+        }
+
+        .navbar a {
+            margin: 0 20px;
+            text-decoration: none;
+            color: black;
+            font-size: 18px;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        /* MAIN LAYOUT */
+        .container {
+            display: flex;
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        .left {
+            width: 35%;
+        }
+
+        .left img {
+            width: 250px;
+            border-radius: 20px;
+        }
+
+        .left p {
+            margin-top: 15px;
+        }
+
+        .right {
+            width: 65%;
+            padding-left: 40px;
+        }
+
+        /* GRID GALLERY */
+        .gallery {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 20px;
+        }
+
+        .gallery img {
+            width: 100%;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        /* Large image spanning 2 columns */
+        .wide {
+            grid-column: span 2;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="navbar">
+    <h1><a href="index.html">Ashish Adhikari</a></h1>
+    <div>
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a href="teaching.html">Teaching</a>
+        <a href="fieldwork.html">Fieldwork</a>
+        <a href="assets/Ashish_Resume.pdf" target="_blank">CV</a>
+    </div>
+</div>
+
+<div class="container">
+
+    <!-- LEFT COLUMN -->
+    <div class="left">
+        <img src="profile.JPG" alt="Profile photo">
+
+        <p><strong>PhD Student</strong><br>
+        The Ohio State University</p>
+
+        <p><i class="fas fa-location-dot"></i> Columbus, OH</p>
+    </div>
+
+    <!-- RIGHT COLUMN -->
+    <div class="right">
+
+        <div class="gallery">
+
+            <!-- Top two images -->
+            <img src="assets/images/fieldwork/field1.jpg">
+            <img src="assets/images/fieldwork/field2.jpg">
+
+            <!-- Large center image -->
+            <img src="assets/images/fieldwork/field3.jpg" class="wide">
+
+            <!-- Two stacked images -->
+            <img src="assets/images/fieldwork/field4.jpg">
+            <img src="assets/images/fieldwork/field5.jpg">
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
