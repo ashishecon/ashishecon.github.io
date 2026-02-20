@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Teaching | Ashish Adhikari</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <style>
         body {
@@ -14,7 +18,7 @@
             line-height: 1.6;
         }
 
-        /* NAVBAR (same style as your other pages) */
+        /* NAVBAR */
         .navbar {
             background-color: white;
             padding: 20px 60px;
@@ -44,14 +48,59 @@
             text-decoration: underline;
         }
 
-        /* PAGE CONTENT */
-        .page {
-            max-width: 900px;
-            margin: 60px auto;
-            padding: 0 20px;
-            background: transparent;
+        /* Make name link look like normal text */
+        .navbar h1 a {
+            color: black;
+            text-decoration: none;
+            font-size: 28px;
+            font-family: Georgia, serif;
         }
 
+        .navbar h1 a:hover {
+            text-decoration: none;
+        }
+
+        /* MAIN LAYOUT (same as research page) */
+        .container {
+            display: flex;
+            max-width: 1000px;
+            margin: 60px 40px 60px 150px; /* Top Right Bottom Left */
+            padding: 0 10px;
+        }
+
+        .left {
+            width: 35%;
+        }
+
+        .left img {
+            width: 250px;
+            border-radius: 20px;
+        }
+
+        .left p {
+            margin-top: 15px;
+        }
+
+        .right {
+            width: 65%;
+            padding-left: 50px;
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+
+        /* General links (NOT navbar) */
+        a {
+            color: #1a73e8;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Teaching formatting */
         .teaching-item {
             margin-bottom: 50px;
         }
@@ -68,13 +117,13 @@
             margin: 10px 0 25px 0;
         }
 
-        ul {
+        .right ul {
             margin: 0;
             padding-left: 30px;
             font-size: 20px;
         }
 
-        li {
+        .right li {
             margin-bottom: 18px;
         }
     </style>
@@ -82,86 +131,84 @@
 
 <body>
 
-<div class="navbar">
-    <h1><a href="index.html" style="color:black;text-decoration:none;">Ashish Adhikari</a></h1>
-    <div>
-        <a href="index.html">Home</a>
-        <a href="research.html">Research</a>
-        <a href="teaching.html">Teaching</a>
-        <a href="#">Fieldwork</a>
-        <a href="#">CV</a>
-    </div>
-</div>
-
-
-
-<div class="container">
-
-    <div class="left">  
-        <img src="profile.JPG" alt="Profile photo">
-
-        <p><strong> PhD Student</strong><br>
-        The Ohio State University</p>
-
-        <p>
-        <i class="fas fa-location-dot"></i> Columbus, OH
-             </p>
-    </p>
-       <a href="mailto:adhikari.143@osu.edu">
-            <i class="fas fa-envelope"></i> Email
-        </a>
-    </p>
-
-    <p>
-        <a href="https://x.com/ashishadk007" target="_blank">
-            <i class="fab fa-x-twitter"></i> Twitter
-        </a>
-    </p>
-
-    <p>
-        <a href="https://www.linkedin.com/in/ashish-adhikari-3195a911b/" target="_blank">
-            <i class="fab fa-linkedin"></i> LinkedIn
-        </a>
-    </p>
-
-    <p>
-        <a href="https://orcid.org/0009-0000-4931-4439" target="_blank">
-            <i class="fab fa-orcid"></i> ORCID
-        </a>
-    </p>
+    <div class="navbar">
+        <h1><a href="index.html">Ashish Adhikari</a></h1>
+        <div>
+            <a href="index.html">Home</a>
+            <a href="research.html">Research</a>
+            <a href="teaching.html">Teaching</a>
+            <a href="#">Fieldwork</a>
+            <a href="#">CV</a>
+        </div>
     </div>
 
+    <div class="container">
 
+        <!-- LEFT COLUMN (photo + contact) -->
+        <div class="left">
+            <img src="profile.JPG" alt="Profile photo">
 
+            <p><strong>PhD Student</strong><br>
+                The Ohio State University</p>
 
-    
-<div class="page">
+            <p><i class="fas fa-location-dot"></i> Columbus, OH</p>
 
-    <div class="teaching-item">
-        <div class="teaching-title">Lab instructor - Data Analysis for Agribusiness &amp; Applied Economics (AEDE 2005)</div>
-        <hr class="divider">
+            <p>
+                <a href="mailto:adhikari.143@osu.edu">
+                    <i class="fas fa-envelope"></i> Email
+                </a>
+            </p>
 
-        <ul>
-            <li>Term: Fall 2021 (In-person)</li>
-            <li>Level: Undergraduate</li>
-            <li>Class size: 41 students</li>
-            <li>Responsibilities: Led lab sessions focused on teaching data management and statistical analysis using Excel.</li>
-        </ul>
+            <p>
+                <a href="https://x.com/ashishadk007" target="_blank">
+                    <i class="fab fa-x-twitter"></i> Twitter
+                </a>
+            </p>
+
+            <p>
+                <a href="https://www.linkedin.com/in/ashish-adhikari-3195a911b/" target="_blank">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+            </p>
+
+            <p>
+                <a href="https://orcid.org/0009-0000-4931-4439" target="_blank">
+                    <i class="fab fa-orcid"></i> ORCID
+                </a>
+            </p>
+        </div>
+
+        <!-- RIGHT COLUMN (Teaching content) -->
+        <div class="right">
+
+            <h2>Teaching</h2>
+            <hr>
+
+            <div class="teaching-item">
+                <div class="teaching-title">Lab instructor - Data Analysis for Agribusiness &amp; Applied Economics (AEDE 2005)</div>
+                <hr class="divider">
+                <ul>
+                    <li>Term: Fall 2021 (In-person)</li>
+                    <li>Level: Undergraduate</li>
+                    <li>Class size: 41 students</li>
+                    <li>Responsibilities: Led lab sessions focused on teaching data management and statistical analysis using Excel.</li>
+                </ul>
+            </div>
+
+            <div class="teaching-item">
+                <div class="teaching-title">Lab Instructor - Applied Econometrics I and II (AEDE 7130, AEDE 7140)</div>
+                <hr class="divider">
+                <ul>
+                    <li>Term: Spring 2021 (Online)</li>
+                    <li>Level: Ph.D.</li>
+                    <li>Class size: 11 students</li>
+                    <li>Responsibilities: Led lab sessions focused on teaching data management and econometric analysis using real and simulated datasets in R and Stata.</li>
+                </ul>
+            </div>
+
+        </div>
+
     </div>
-
-    <div class="teaching-item">
-        <div class="teaching-title">Lab Instructor - Applied Econometrics I and II (AEDE 7130, AEDE 7140)</div>
-        <hr class="divider">
-
-        <ul>
-            <li>Term: Spring 2021 (Online)</li>
-            <li>Level: Ph.D.</li>
-            <li>Class size: 11 students</li>
-            <li>Responsibilities: Led lab sessions focused on teaching data management and econometric analysis using real and simulated datasets in R and Stata.</li>
-        </ul>
-    </div>
-
-</div>
 
 </body>
 </html>
