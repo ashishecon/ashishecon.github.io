@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Fieldwork | Ashish Adhikari</title>
+<meta name="description" content="Fieldwork by Ashish Adhikari: household surveys, focus group discussions, and interviews across rural Nepal and Bihar, India." />
+<link rel="canonical" href="https://ashishecon.github.io/fieldwork.html" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --ink: #20232a;
+    --muted: #565b63;
+    --faint: #8b9097;
+    --rule: #e7e4df;
+    --accent: #21565b;
+    --cv: #9a6a45;
+    --bg: #fdfcfa;
+    --bg-soft: #f4f1ea;
+    --maxw: 1180px;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    color: var(--ink); background: var(--bg);
+    line-height: 1.6; font-size: 17px; -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  /* ---- Top nav (matches home) ---- */
+  nav {
+    position: sticky; top: 0; z-index: 20;
+    background: rgba(253,252,250,0.88);
+    backdrop-filter: saturate(180%) blur(8px);
+    border-bottom: 1px solid var(--rule);
+  }
+  nav .wrap {
+    max-width: var(--maxw); margin: 0 auto; padding: 16px 40px;
+    display: flex; justify-content: space-between; align-items: center; gap: 16px;
+  }
+  nav .name { font-family: "Source Serif 4", Georgia, serif; font-weight: 600; font-size: 18px; letter-spacing: .2px; color: var(--ink); }
+  nav .name:hover { text-decoration: none; }
+  nav .links { display: flex; gap: 26px; font-size: 15px; }
+  nav .links a { color: var(--muted); }
+  nav .links a.active { color: var(--accent); font-weight: 600; }
+  nav .links a:hover { color: var(--accent); text-decoration: none; }
+  @media (max-width: 560px) { nav .wrap { padding: 14px 24px; } nav .links { gap: 16px; font-size: 14px; } }
+
+  /* ---- Page ---- */
+  .page { max-width: var(--maxw); margin: 0 auto; padding: 50px 40px 90px; }
+  .page h1 {
+    font-family: "Source Serif 4", Georgia, serif;
+    font-size: 40px; font-weight: 600; margin: 0 0 12px; letter-spacing: -0.4px;
+  }
+  .page .intro { font-size: 17px; color: #33363c; max-width: 760px; margin: 0 0 34px; }
+
+  /* ---- Gallery grid ---- */
+  .gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .tile {
+    position: relative; overflow: hidden; border-radius: 10px;
+    aspect-ratio: 4 / 3; background: var(--bg-soft);
+    box-shadow: 0 3px 12px rgba(40,30,20,0.08);
+  }
+  .tile img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+    cursor: zoom-in; transition: transform .4s ease;
+  }
+  .tile:hover img { transform: scale(1.05); }
+  @media (max-width: 860px) { .gallery { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 540px) { .gallery { grid-template-columns: 1fr; } }
+
+  /* ---- Lightbox ---- */
+  .lightbox {
+    position: fixed; inset: 0; background: rgba(18,16,14,0.92);
+    display: none; align-items: center; justify-content: center;
+    z-index: 50; padding: 28px; cursor: zoom-out;
+  }
+  .lightbox.open { display: flex; }
+  .lightbox img { max-width: 94%; max-height: 94%; border-radius: 8px; box-shadow: 0 12px 48px rgba(0,0,0,0.55); }
+
+  footer { max-width: var(--maxw); margin: 0 auto; padding: 0 40px 44px; color: var(--faint); font-size: 13px; }
+  @media (max-width: 860px) { .page { padding: 36px 28px 70px; } footer { padding: 0 28px 40px; } }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="name" href="index.html">Ashish Adhikari</a>
+    <div class="links">
+      <a href="index.html#research">Research</a>
+      <a href="index.html#teaching">Teaching</a>
+      <a href="fieldwork.html" class="active">Fieldwork</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<main class="page">
+  <h1>Fieldwork</h1>
+  <p class="intro">My research is grounded in primary data collection. Across rural Nepal and Bihar, India, I have conducted household surveys, focus group discussions, and key-informant interviews on agriculture, irrigation, and rural livelihoods. A few moments from the field:</p>
+
+  <div class="gallery">
+    <div class="tile"><img src="assets/img/fieldwork/field7.jpg" alt="Interviewing a farmer in the field" loading="lazy"></div>
+    <div class="tile"><img src="assets/img/fieldwork/field2.jpg" alt="Focus group discussion with women respondents" loading="lazy"></div>
+    <div class="tile"><img src="assets/img/fieldwork/field5.jpg" alt="Field team during data collection" loading="lazy"></div>
+    <div class="tile"><img src="assets/img/fieldwork/field1.jpg" alt="Conducting a household survey" loading="lazy"></div>
+    <div class="tile"><img src="assets/img/fieldwork/field6.jpg" alt="Community focus group discussion" loading="lazy"></div>
+    <div class="tile"><img src="assets/img/fieldwork/field4.jpg" alt="Agricultural landscape in the study area" loading="lazy"></div>
+    <div class="tile"><img src="assets/img/fieldwork/field3.jpg" alt="Enumerator training session" loading="lazy"></div>
+    <div class="tile"><img src="assets/img/fieldwork/field8.jpg" alt="Participatory mapping exercise" loading="lazy"></div>
+    <div class="tile"><img src="assets/img/fieldwork/field9.jpg" alt="Irrigation infrastructure in the study area" loading="lazy"></div>
+  </div>
+</main>
+
+<footer>© 2026 Ashish Adhikari</footer>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox"><img id="lb-img" src="" alt=""></div>
+<script>
+  (function(){
+    var lb = document.getElementById('lightbox');
+    var lbimg = document.getElementById('lb-img');
+    document.querySelectorAll('.tile img').forEach(function(img){
+      img.addEventListener('click', function(){ lbimg.src = img.src; lb.classList.add('open'); });
+    });
+    lb.addEventListener('click', function(){ lb.classList.remove('open'); lbimg.src = ''; });
+    document.addEventListener('keydown', function(e){ if(e.key === 'Escape'){ lb.classList.remove('open'); lbimg.src=''; } });
+  })();
+</script>
+</body>
+</html>
