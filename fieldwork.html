@@ -14,11 +14,11 @@
     --ink: #20232a;
     --muted: #565b63;
     --faint: #8b9097;
-    --rule: #e7e4df;
+    --rule: #e8e2d4;
     --accent: #1f3a63;
     --cv: #9a6a45;
-    --bg: #fdfcfa;
-    --bg-soft: #f4f1ea;
+    --bg: #f6f3ea;
+    --bg-soft: #ece6d8;
     --maxw: 1180px;
   }
   * { box-sizing: border-box; }
@@ -35,10 +35,17 @@
   /* ---- Top nav (matches home) ---- */
   nav {
     position: sticky; top: 0; z-index: 20;
-    background: rgba(253,252,250,0.88);
+    background: rgba(246,243,234,0.82);
     backdrop-filter: saturate(180%) blur(8px);
     border-bottom: 1px solid var(--rule);
   }
+
+  /* ---- Scroll reveal ---- */
+  .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s cubic-bezier(.2,.6,.2,1), transform .7s cubic-bezier(.2,.6,.2,1); }
+  .reveal.visible { opacity: 1; transform: none; }
+  .tile.reveal:nth-child(3n+2) { transition-delay: .08s; }
+  .tile.reveal:nth-child(3n+3) { transition-delay: .16s; }
+  @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1 !important; transform: none !important; transition: none; } }
   nav .wrap {
     max-width: var(--maxw); margin: 0 auto; padding: 16px 40px;
     display: flex; justify-content: space-between; align-items: center; gap: 16px;
@@ -102,19 +109,19 @@
 </nav>
 
 <main class="page">
-  <h1>Fieldwork</h1>
-  <p class="intro">My research is grounded in primary data collection. Across rural Nepal and Bihar, India, I have conducted household surveys, focus group discussions, and key-informant interviews on agriculture, irrigation, and rural livelihoods. A few moments from the field:</p>
+  <h1 class="reveal">Fieldwork</h1>
+  <p class="intro reveal">My research is grounded in primary data collection. Across rural Nepal and Bihar, India, I have conducted household surveys, focus group discussions, and key-informant interviews on agriculture, irrigation, and rural livelihoods. A few moments from the field:</p>
 
   <div class="gallery">
-    <div class="tile"><img src="assets/img/fieldwork/field7.jpg" alt="Interviewing a farmer in the field" loading="lazy"></div>
-    <div class="tile"><img src="assets/img/fieldwork/field2.jpg" alt="Focus group discussion with women respondents" loading="lazy"></div>
-    <div class="tile"><img src="assets/img/fieldwork/field5.jpg" alt="Field team during data collection" loading="lazy"></div>
-    <div class="tile"><img src="assets/img/fieldwork/field1.jpg" alt="Conducting a household survey" loading="lazy"></div>
-    <div class="tile"><img src="assets/img/fieldwork/field6.jpg" alt="Community focus group discussion" loading="lazy"></div>
-    <div class="tile"><img src="assets/img/fieldwork/field4.jpg" alt="Agricultural landscape in the study area" loading="lazy"></div>
-    <div class="tile"><img src="assets/img/fieldwork/field3.jpg" alt="Enumerator training session" loading="lazy"></div>
-    <div class="tile"><img src="assets/img/fieldwork/field8.jpg" alt="Participatory mapping exercise" loading="lazy"></div>
-    <div class="tile"><img src="assets/img/fieldwork/field9.jpg" alt="Irrigation infrastructure in the study area" loading="lazy"></div>
+    <div class="tile reveal"><img src="assets/img/fieldwork/field7.jpg" alt="Interviewing a farmer in the field" loading="lazy"></div>
+    <div class="tile reveal"><img src="assets/img/fieldwork/field2.jpg" alt="Focus group discussion with women respondents" loading="lazy"></div>
+    <div class="tile reveal"><img src="assets/img/fieldwork/field5.jpg" alt="Field team during data collection" loading="lazy"></div>
+    <div class="tile reveal"><img src="assets/img/fieldwork/field1.jpg" alt="Conducting a household survey" loading="lazy"></div>
+    <div class="tile reveal"><img src="assets/img/fieldwork/field6.jpg" alt="Community focus group discussion" loading="lazy"></div>
+    <div class="tile reveal"><img src="assets/img/fieldwork/field4.jpg" alt="Agricultural landscape in the study area" loading="lazy"></div>
+    <div class="tile reveal"><img src="assets/img/fieldwork/field3.jpg" alt="Enumerator training session" loading="lazy"></div>
+    <div class="tile reveal"><img src="assets/img/fieldwork/field8.jpg" alt="Participatory mapping exercise" loading="lazy"></div>
+    <div class="tile reveal"><img src="assets/img/fieldwork/field9.jpg" alt="Irrigation infrastructure in the study area" loading="lazy"></div>
   </div>
 </main>
 
@@ -131,6 +138,19 @@
     });
     lb.addEventListener('click', function(){ lb.classList.remove('open'); lbimg.src = ''; });
     document.addEventListener('keydown', function(e){ if(e.key === 'Escape'){ lb.classList.remove('open'); lbimg.src=''; } });
+
+    // Scroll reveal
+    var els = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window)) {
+      els.forEach(function (e) { e.classList.add('visible'); });
+    } else {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          if (en.isIntersecting) { en.target.classList.add('visible'); io.unobserve(en.target); }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -6% 0px' });
+      els.forEach(function (e) { io.observe(e); });
+    }
   })();
 </script>
 </body>

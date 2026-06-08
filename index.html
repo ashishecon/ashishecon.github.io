@@ -57,11 +57,11 @@
     --ink: #20232a;
     --muted: #565b63;
     --faint: #8b9097;
-    --rule: #e7e4df;
+    --rule: #e8e2d4;
     --accent: #1f3a63;     /* deep navy — professional, pairs with the warm brown CV button */
     --cv: #9a6a45;          /* warm brown */
-    --bg: #fdfcfa;          /* warm off-white */
-    --bg-soft: #f4f1ea;
+    --bg: #f6f3ea;          /* cottage white — soft warm cream */
+    --bg-soft: #ece6d8;
     --maxw: 1180px;
     --sidebar: 290px;
   }
@@ -79,10 +79,15 @@
   /* ---- Top nav ---- */
   nav {
     position: sticky; top: 0; z-index: 20;
-    background: rgba(253,252,250,0.88);
+    background: rgba(246,243,234,0.82);
     backdrop-filter: saturate(180%) blur(8px);
     border-bottom: 1px solid var(--rule);
   }
+
+  /* ---- Scroll reveal ---- */
+  .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s cubic-bezier(.2,.6,.2,1), transform .7s cubic-bezier(.2,.6,.2,1); }
+  .reveal.visible { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1 !important; transform: none !important; transition: none; } }
   nav .wrap {
     max-width: var(--maxw); margin: 0 auto; padding: 16px 40px;
     display: flex; justify-content: space-between; align-items: center; gap: 16px;
@@ -193,7 +198,7 @@
 <div class="layout" id="top">
 
   <!-- ============ SIDEBAR ============ -->
-  <aside class="sidebar">
+  <aside class="sidebar reveal">
     <img class="portrait" src="assets/img/portrait.jpg" alt="Ashish Adhikari" />
     <a class="cv-btn" href="assets/cv/Ashish_Adhikari_CV.pdf">📄 Curriculum Vitae</a>
     <div class="iconcol">
@@ -206,22 +211,18 @@
 
   <!-- ============ MAIN CONTENT ============ -->
   <main class="content">
-    <h1>Ashish Adhikari</h1>
+    <h1 class="reveal">Ashish Adhikari</h1>
 
     <!-- ABOUT -->
-    <section class="about" id="about">
+    <section class="about reveal" id="about">
       <h2>About</h2>
-      <p class="lead">I am a fifth-year PhD student in the Department of Agricultural, Environmental, and Development Economics at The Ohio State University.</p>
-      <p class="lead">My research interests lie in development economics and international trade in agriculture. I specifically focus on:</p>
-      <ul class="focus-list">
-        <li>Gender inequality in child health</li>
-        <li>International trade</li>
-        <li>Agricultural economics</li>
-      </ul>
+      <p class="lead">I am a fifth-year Ph.D. student in Agricultural, Environmental, and Development Economics at The Ohio State University. My research focuses on why inequalities persist and how they shape household welfare and development outcomes. I am also interested in international trade, irrigation, and the role of agricultural systems in rural livelihoods.</p>
+      <p class="lead">My interest in these questions is shaped by my master&rsquo;s training in agricultural economics at the University of Georgia, my background in agricultural science in Nepal, and field experience across rural Nepal and parts of Bihar, India.</p>
+      <p class="lead">Beyond research, I find real joy in teaching. I have independently taught undergraduate Data Analysis and served as a lab instructor and teaching assistant in the United States, and taught in a government school in the remote hills of Nepal.</p>
     </section>
 
     <!-- RESEARCH -->
-    <section id="research">
+    <section id="research" class="reveal">
       <h2>Research</h2>
 
       <div class="paper">
@@ -253,7 +254,7 @@
     </section>
 
     <!-- TEACHING -->
-    <section id="teaching">
+    <section id="teaching" class="reveal">
       <h2>Teaching</h2>
 
       <div class="course">
@@ -296,7 +297,7 @@
     </section>
 
     <!-- CONTACT -->
-    <section id="contact">
+    <section id="contact" class="reveal">
       <h2>Contact</h2>
       <p class="lead">
         Department of Agricultural, Environmental &amp; Development Economics<br>
@@ -309,6 +310,22 @@
 </div>
 
 <footer>© 2026 Ashish Adhikari</footer>
+
+<script>
+  (function () {
+    var els = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window)) {
+      els.forEach(function (e) { e.classList.add('visible'); });
+      return;
+    }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) { en.target.classList.add('visible'); io.unobserve(en.target); }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -6% 0px' });
+    els.forEach(function (e) { io.observe(e); });
+  })();
+</script>
 
 </body>
 </html>
