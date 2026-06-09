@@ -81,6 +81,20 @@
   @media (max-width: 860px) { .gallery { grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 540px) { .gallery { grid-template-columns: 1fr; } }
 
+  /* ---- Field reports ---- */
+  .reports { margin-top: 52px; }
+  .reports h2 {
+    font-family: "Source Serif 4", Georgia, serif;
+    font-size: 23px; font-weight: 600; color: var(--accent);
+    margin: 0 0 18px; padding-bottom: 10px; position: relative; letter-spacing: -0.2px;
+  }
+  .reports h2::after { content: ""; position: absolute; left: 0; bottom: 0; width: 44px; height: 3px; background: var(--accent); border-radius: 2px; }
+  .report-list { list-style: none; margin: 0; padding: 0; max-width: 760px; }
+  .report-list li { margin-bottom: 16px; }
+  .report-list li a { font-weight: 600; font-size: 16.5px; }
+  .report-list li a::before { content: "📄 "; }
+  .report-list .rmeta { display: block; color: var(--muted); font-size: 14px; margin-top: 2px; }
+
   /* ---- Lightbox ---- */
   .lightbox {
     position: fixed; inset: 0; background: rgba(18,16,14,0.92);
@@ -123,6 +137,20 @@
     <div class="tile reveal"><img src="assets/img/fieldwork/field8.jpg" alt="Participatory mapping exercise" loading="lazy"></div>
     <div class="tile reveal"><img src="assets/img/fieldwork/field9.jpg" alt="Irrigation infrastructure in the study area" loading="lazy"></div>
   </div>
+
+  <section class="reports reveal">
+    <h2>Field Reports</h2>
+    <ul class="report-list">
+      <li>
+        <a href="assets/reports/Bihar_Scoping.pdf" target="_blank" rel="noopener">Bihar Scoping Report</a>
+        <span class="rmeta">Bihar, India &middot; June 2025</span>
+      </li>
+      <li>
+        <a href="assets/reports/Irrigation_in_Nepal.pdf" target="_blank" rel="noopener">Institutional Roles in Irrigation Management in Nepal</a>
+        <span class="rmeta">Nepal</span>
+      </li>
+    </ul>
+  </section>
 </main>
 
 <footer>© 2026 Ashish Adhikari</footer>
