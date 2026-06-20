@@ -43,8 +43,8 @@
   /* ---- Scroll reveal ---- */
   .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s cubic-bezier(.2,.6,.2,1), transform .7s cubic-bezier(.2,.6,.2,1); }
   .reveal.visible { opacity: 1; transform: none; }
-  .tile.reveal:nth-child(3n+2) { transition-delay: .08s; }
-  .tile.reveal:nth-child(3n+3) { transition-delay: .16s; }
+  .shot.reveal:nth-child(3n+2) { transition-delay: .08s; }
+  .shot.reveal:nth-child(3n+3) { transition-delay: .16s; }
   @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1 !important; transform: none !important; transition: none; } }
   nav .wrap {
     max-width: var(--maxw); margin: 0 auto; padding: 16px 40px;
@@ -67,17 +67,19 @@
   .page .intro { font-size: 17px; color: #33363c; max-width: 760px; margin: 0 0 34px; }
 
   /* ---- Gallery grid ---- */
-  .gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-  .tile {
+  .gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px 16px; }
+  .shot { margin: 0; }
+  .shot .tile {
     position: relative; overflow: hidden; border-radius: 10px;
     aspect-ratio: 4 / 3; background: var(--bg-soft);
     box-shadow: 0 3px 12px rgba(40,30,20,0.08);
   }
-  .tile img {
+  .shot .tile img {
     width: 100%; height: 100%; object-fit: cover; display: block;
     cursor: zoom-in; transition: transform .4s ease;
   }
-  .tile:hover img { transform: scale(1.05); }
+  .shot .tile:hover img { transform: scale(1.05); }
+  .shot figcaption { font-size: 13.5px; color: var(--muted); margin-top: 9px; line-height: 1.4; }
   @media (max-width: 860px) { .gallery { grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 540px) { .gallery { grid-template-columns: 1fr; } }
 
@@ -141,15 +143,15 @@
   </section>
 
   <div class="gallery">
-    <div class="tile reveal"><img src="assets/img/fieldwork/field7.jpg" alt="Interviewing a farmer in the field" loading="lazy"></div>
-    <div class="tile reveal"><img src="assets/img/fieldwork/field2.jpg" alt="Focus group discussion with women respondents" loading="lazy"></div>
-    <div class="tile reveal"><img src="assets/img/fieldwork/field5.jpg" alt="Field team during data collection" loading="lazy"></div>
-    <div class="tile reveal"><img src="assets/img/fieldwork/field1.jpg" alt="Conducting a household survey" loading="lazy"></div>
-    <div class="tile reveal"><img src="assets/img/fieldwork/field6.jpg" alt="Community focus group discussion" loading="lazy"></div>
-    <div class="tile reveal"><img src="assets/img/fieldwork/field4.jpg" alt="Agricultural landscape in the study area" loading="lazy"></div>
-    <div class="tile reveal"><img src="assets/img/fieldwork/field3.jpg" alt="Enumerator training session" loading="lazy"></div>
-    <div class="tile reveal"><img src="assets/img/fieldwork/field8.jpg" alt="Participatory mapping exercise" loading="lazy"></div>
-    <div class="tile reveal"><img src="assets/img/fieldwork/field9.jpg" alt="Irrigation infrastructure in the study area" loading="lazy"></div>
+    <figure class="shot reveal"><div class="tile"><img src="assets/img/fieldwork/field7.jpg" alt="Interviewing a farmer" loading="lazy"></div><figcaption>Interviewing a farmer during a household survey</figcaption></figure>
+    <figure class="shot reveal"><div class="tile"><img src="assets/img/fieldwork/field2.jpg" alt="Focus group discussion" loading="lazy"></div><figcaption>Focus group discussion with a women farmers&rsquo; group</figcaption></figure>
+    <figure class="shot reveal"><div class="tile"><img src="assets/img/fieldwork/field5.jpg" alt="Field team at a study site" loading="lazy"></div><figcaption>With the field team at a study site</figcaption></figure>
+    <figure class="shot reveal"><div class="tile"><img src="assets/img/fieldwork/field1.jpg" alt="Household survey" loading="lazy"></div><figcaption>Conducting a household survey</figcaption></figure>
+    <figure class="shot reveal"><div class="tile"><img src="assets/img/fieldwork/field6.jpg" alt="Community meeting" loading="lazy"></div><figcaption>A community meeting in the field</figcaption></figure>
+    <figure class="shot reveal"><div class="tile"><img src="assets/img/fieldwork/field4.jpg" alt="Farmland in the study area" loading="lazy"></div><figcaption>Farmland in Darbhanga, India</figcaption></figure>
+    <figure class="shot reveal"><div class="tile"><img src="assets/img/fieldwork/field3.jpg" alt="Enumerator training" loading="lazy"></div><figcaption>Leading a training on sustainable agriculture</figcaption></figure>
+    <figure class="shot reveal"><div class="tile"><img src="assets/img/fieldwork/field8.jpg" alt="Participatory mapping" loading="lazy"></div><figcaption>A participatory mapping exercise</figcaption></figure>
+    <figure class="shot reveal"><div class="tile"><img src="assets/img/fieldwork/field9.jpg" alt="Irrigation structure" loading="lazy"></div><figcaption>Irrigation infrastructure in the study area</figcaption></figure>
   </div>
 </main>
 
