@@ -79,6 +79,7 @@
     cursor: zoom-in; transition: transform .4s ease;
   }
   .shot .tile:hover img { transform: scale(1.05); }
+  .shot .tile img.pos-top { object-position: center 12%; }
   .shot figcaption { font-size: 13.5px; color: var(--muted); margin-top: 9px; line-height: 1.4; }
   @media (max-width: 860px) { .gallery { grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 540px) { .gallery { grid-template-columns: 1fr; } }
@@ -151,9 +152,9 @@
     <figure class="shot reveal"><div class="tile"><img src="assets/img/fieldwork/field4.jpg" alt="Farmland in the study area" loading="lazy"></div><figcaption>Farmland in Darbhanga, India</figcaption></figure>
     <figure class="shot reveal"><div class="tile"><img src="assets/img/fieldwork/field3.jpg" alt="Enumerator training" loading="lazy"></div><figcaption>Leading a training on sustainable agriculture</figcaption></figure>
     <figure class="shot reveal"><div class="tile"><img src="assets/img/fieldwork/field8.jpg" alt="Helping villagers map their own village" loading="lazy"></div><figcaption>Helping villagers draw a map of their own village</figcaption></figure>
-    <figure class="shot reveal"><div class="tile"><img src="assets/img/fieldwork/field9.jpg" alt="Irrigation structure" loading="lazy"></div><figcaption>Irrigation infrastructure in the study area</figcaption></figure>
     <figure class="shot reveal"><div class="tile"><img src="assets/img/fieldwork/orientation_kapilvastu.jpg" alt="Orientation seminar in Kapilvastu, Nepal" loading="lazy"></div><figcaption>Orientation seminar in Kapilvastu, Nepal</figcaption></figure>
-    <figure class="shot reveal"><div class="tile"><img src="assets/img/fieldwork/soil_testing.jpg" alt="Leading soil testing of farmers fields" loading="lazy"></div><figcaption>Leading soil testing of farmers&rsquo; fields</figcaption></figure>
+    <figure class="shot reveal"><div class="tile"><img src="assets/img/fieldwork/field9.jpg" alt="Irrigation structure" loading="lazy"></div><figcaption>Irrigation infrastructure in the study area</figcaption></figure>
+    <figure class="shot reveal"><div class="tile"><img src="assets/img/fieldwork/soil_testing.jpg" class="pos-top" alt="Leading soil testing of farmers fields" loading="lazy"></div><figcaption>Leading soil testing of farmers&rsquo; fields</figcaption></figure>
     <figure class="shot reveal"><div class="tile"><img src="assets/img/fieldwork/irrigation_equipment.jpg" alt="Distributing small irrigation equipment to farmers" loading="lazy"></div><figcaption>Distributing small irrigation equipment to farmers</figcaption></figure>
   </div>
 </main>
