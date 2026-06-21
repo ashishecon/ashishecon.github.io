@@ -134,12 +134,11 @@
   h2 {
     font-family: "Source Serif 4", Georgia, serif;
     font-size: 23px; font-weight: 600; letter-spacing: -0.2px; text-transform: none;
-    color: var(--accent); margin: 0 0 20px; padding-bottom: 10px; position: relative;
+    color: var(--accent); margin: 0 0 20px; padding-bottom: 10px;
+    border-bottom: 2px solid var(--accent);
   }
-  h2::after {
-    content: ""; position: absolute; left: 0; bottom: 0;
-    width: 44px; height: 3px; background: var(--accent); border-radius: 2px;
-  }
+  .about h2 { border-bottom: none; position: relative; }
+  .about h2::after { content: ""; position: absolute; left: 0; bottom: 0; width: 44px; height: 3px; background: var(--accent); border-radius: 2px; }
   p.lead { font-size: 17px; color: #33363c; margin: 0 0 14px; max-width: 780px; }
   ul.focus-list { margin: 2px 0 0; padding-left: 22px; }
   ul.focus-list li { font-size: 17px; color: #33363c; margin-bottom: 7px; }
@@ -153,8 +152,12 @@
   }
   .paper .meta { font-size: 14.5px; color: var(--faint); margin: 0 0 8px; }
   .paper .meta .status { color: var(--accent); font-weight: 600; }
-  .paper .meta .pdf-link { color: var(--accent); font-weight: 600; }
-  .paper .meta .pdf-link::before { content: "\1F4C4\00A0"; }
+  .paper .meta .pdf-link {
+    display: inline-block; color: var(--accent); font-weight: 600; font-size: 12px;
+    letter-spacing: .5px; border: 1px solid var(--accent); border-radius: 3px;
+    padding: 1px 9px; transition: background .15s ease, color .15s ease;
+  }
+  .paper .meta .pdf-link:hover { background: var(--accent); color: #fff; text-decoration: none; }
   details.abstract-toggle { margin-top: 6px; }
   details.abstract-toggle summary {
     cursor: pointer; font-size: 14px; color: var(--accent); font-weight: 600;
@@ -260,7 +263,7 @@
 
       <div class="paper">
         <h3>Irrigation in Transition: Changing Patterns of Groundwater Use in Nepal</h3>
-        <p class="meta">with Leah Bevis, Avinash Kishore &amp; Anton Urfels &nbsp;·&nbsp; <span class="status">Under review</span> &nbsp;·&nbsp; <a href="assets/papers/Irrigation_in_Transition.pdf" target="_blank" rel="noopener" class="pdf-link">PDF</a></p>
+        <p class="meta">with Leah Bevis, Avinash Kishore &amp; Anton Urfels &nbsp;·&nbsp; <span class="status">Under review</span> &nbsp;&nbsp; <a href="assets/papers/Irrigation_in_Transition.pdf" target="_blank" rel="noopener" class="pdf-link">PDF</a></p>
         <details class="abstract-toggle">
           <summary>Abstract</summary>
           <p>Irrigation in the Eastern Gangetic Plains is changing fast in water use and energy. Focusing on Nepal&rsquo;s Terai, we provide an updated assessment of irrigation patterns, with attention to irrigation assets, costs, and access. Three findings stand out. First, irrigation is shifting from surface water to groundwater and from diesel to electric pumps. Second, despite cheaper electric pumping and rapid grid expansion, access remains uneven, with regional differences in ownership and rental markets shaping both cost and timeliness. Third, renters face higher irrigation costs and longer delays than owners. These patterns reveal persistent disparities in irrigation access despite ongoing transitions.</p>
