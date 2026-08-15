@@ -143,8 +143,21 @@
   ul.focus-list { margin: 2px 0 0; padding-left: 22px; }
   ul.focus-list li { font-size: 17px; color: #33363c; margin-bottom: 7px; }
 
+  /* ---- Fields of research ---- */
+  .fields { font-size: 14.5px; color: var(--muted); margin: -6px 0 24px; line-height: 1.7; }
+  .fields b { color: var(--ink); font-weight: 600; }
+
+  /* ---- Research subsection headings ---- */
+  h3.subhead {
+    font-family: "Source Serif 4", Georgia, serif;
+    font-size: 16.5px; font-weight: 600; color: var(--ink);
+    margin: 32px 0 16px; padding-bottom: 5px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .fields + h3.subhead { margin-top: 0; }
+
   /* ---- Paper list ---- */
-  .paper { margin-bottom: 40px; }
+  .paper { margin-bottom: 26px; }
   .paper:last-child { margin-bottom: 0; }
   .paper h3 {
     font-family: "Source Serif 4", Georgia, serif;
@@ -257,6 +270,12 @@
     <!-- RESEARCH -->
     <section id="research" class="reveal">
       <h2>Research</h2>
+      <p class="fields">
+        <b>Primary:</b> Development Economics<br>
+        <b>Secondary:</b> International Trade in Agriculture; Agricultural Economics
+      </p>
+
+      <h3 class="subhead">Working Papers</h3>
 
       <div class="paper">
         <h3>Effects of Unmet Son Preference on Fertility Responses and Child Health: Evidence from South Asia</h3>
@@ -294,6 +313,25 @@
         <details class="abstract-toggle">
           <summary>Abstract</summary>
           <p>Irrigation in the Eastern Gangetic Plains is changing fast in water use and energy. Focusing on Nepal&rsquo;s Terai, we provide an updated assessment of irrigation patterns, with attention to irrigation assets, costs, and access. Three findings stand out. First, irrigation is shifting from surface water to groundwater and from diesel to electric pumps. Second, despite cheaper electric pumping and rapid grid expansion, access remains uneven, with regional differences in ownership and rental markets shaping both cost and timeliness. Third, renters face higher irrigation costs and longer delays than owners. These patterns reveal persistent disparities in irrigation access despite ongoing transitions.</p>
+        </details>
+      </div>
+
+      <h3 class="subhead">Work in Progress</h3>
+
+      <div class="paper">
+        <h3>Does Political Reservation Affect Program Implementation? Evidence from India</h3>
+        <details class="abstract-toggle">
+          <summary>Abstract</summary>
+          <p>Political reservation brings disadvantaged groups into leadership positions and can change which policies are chosen and who benefits. Yet representation can improve welfare only if local leaders can also implement public programs effectively. Using administrative records on sanctioned public works and their implementation status, I examine how reserving Gram Panchayat leadership for Scheduled Castes (SCs), Other Backward Classes (OBCs), and women affects program execution across two electoral terms in Uttar Pradesh, India. I find that SC-reserved Gram Panchayats complete fewer projects and have more abandoned works than unreserved Gram Panchayats. I find similar but smaller effects for OBC reservation and almost no effect of women&rsquo;s reservation. These findings suggest that political inclusion alone may not ensure effective program delivery.</p>
+        </details>
+      </div>
+
+      <div class="paper">
+        <h3>Political Power and Public Health: Examining the Effects of Low-Caste Representation on Child Health in India</h3>
+        <p class="meta">with Karan Shakya &amp; Jongeun Park</p>
+        <details class="abstract-toggle">
+          <summary>Abstract</summary>
+          <p>In India, state election (Vidhan Sabha) results significantly impact constituencies, as state governments hold substantial power over policies and expenditures. These elections occur at the assembly level, a smaller administrative unit than districts. &ldquo;Low-caste parties,&rdquo; or political parties focused on representing marginalized groups such as Scheduled Castes (SC), Scheduled Tribes (ST), and Other Backward Classes (OBC), can run for office. Using a fuzzy regression discontinuity design and assuming close election results are quasi-random, we examine the welfare impacts when low-caste parties win elections, particularly on health outcomes, which have historically been worse for these marginalized households. We also test whether these effects are lasting or depend on subsequent elections.</p>
         </details>
       </div>
     </section>
