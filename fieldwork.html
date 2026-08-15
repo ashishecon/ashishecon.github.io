@@ -53,8 +53,12 @@
   nav .name { font-family: "Source Serif 4", Georgia, serif; font-weight: 600; font-size: 18px; letter-spacing: .2px; color: var(--ink); }
   nav .name:hover { text-decoration: none; }
   nav .links { display: flex; gap: 26px; font-size: 15px; }
-  nav .links a { color: var(--muted); }
-  nav .links a.active { color: var(--accent); font-weight: 600; }
+  nav .links a {
+    color: var(--muted); padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+    transition: color .2s ease, border-color .2s ease;
+  }
+  nav .links a.active { color: var(--accent); font-weight: 600; border-bottom-color: var(--accent); }
   nav .links a:hover { color: var(--accent); text-decoration: none; }
   @media (max-width: 560px) { nav .wrap { padding: 14px 24px; } nav .links { gap: 16px; font-size: 14px; } }
 

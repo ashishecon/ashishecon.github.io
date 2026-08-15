@@ -95,8 +95,13 @@
   nav .name { font-family: "Source Serif 4", Georgia, serif; font-weight: 600; font-size: 18px; letter-spacing: .2px; color: var(--ink); }
   nav .name:hover { text-decoration: none; }
   nav .links { display: flex; gap: 26px; font-size: 15px; }
-  nav .links a { color: var(--muted); }
+  nav .links a {
+    color: var(--muted); padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+    transition: color .2s ease, border-color .2s ease;
+  }
   nav .links a:hover { color: var(--accent); text-decoration: none; }
+  nav .links a.active { color: var(--accent); font-weight: 600; border-bottom-color: var(--accent); }
   @media (max-width: 560px) { nav .wrap { padding: 14px 24px; } nav .links { gap: 16px; font-size: 14px; } }
 
   /* ---- Two-column page layout ---- */
@@ -186,7 +191,8 @@
   details.abstract-toggle summary::-webkit-details-marker { display: none; }
   details.abstract-toggle summary::before { content: "▸ "; }
   details.abstract-toggle[open] summary::before { content: "▾ "; }
-  details.abstract-toggle p { font-size: 16px; color: var(--muted); margin: 8px 0 0; max-width: 920px; }
+  details.abstract-toggle p { font-size: 16px; color: var(--muted); margin: 8px 0 0; max-width: 920px;
+    text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
 
   /* ---- Teaching ---- */
   .course { margin-bottom: 28px; max-width: 940px; }
@@ -276,8 +282,8 @@
     <section id="research" class="reveal">
       <h2>Research</h2>
       <p class="fields">
-        <b>Primary:</b> Development Economics<br>
-        <b>Secondary:</b> International Trade in Agriculture; Agricultural Economics
+        <b>Primary field of interest:</b> Development Economics<br>
+        <b>Secondary fields of interest:</b> International Trade in Agriculture; Agricultural Economics
       </p>
 
       <h3 class="subhead">Working Papers</h3>
@@ -437,6 +443,37 @@
       });
     }, { threshold: 0.1, rootMargin: '0px 0px -6% 0px' });
     els.forEach(function (e) { io.observe(e); });
+  })();
+
+  // Highlight the nav link for the section currently in view
+  (function () {
+    var links = Array.prototype.slice.call(
+      document.querySelectorAll('nav .links a[href^="#"]')
+    );
+    var items = links.map(function (a) {
+      return { link: a, el: document.querySelector(a.getAttribute('href')) };
+    }).filter(function (i) { return i.el; });
+    if (!items.length) return;
+
+    function update() {
+      var pos = window.scrollY + 140;
+      var current = null;
+      items.forEach(function (i) {
+        if (i.el.getBoundingClientRect().top + window.scrollY <= pos) current = i;
+      });
+      // At the bottom of the page the last section can never cross the
+      // threshold, so treat it as current once we reach the end.
+      if (window.innerHeight + window.scrollY >=
+          document.documentElement.scrollHeight - 4) {
+        current = items[items.length - 1];
+      }
+      links.forEach(function (a) { a.classList.remove('active'); });
+      if (current) current.link.classList.add('active');
+    }
+
+    window.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+    update();
   })();
 </script>
 
