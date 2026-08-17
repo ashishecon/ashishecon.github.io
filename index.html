@@ -174,7 +174,11 @@
     font-family: "Source Serif 4", Georgia, serif;
     font-size: 18px; font-weight: 600; margin: 0 0 5px; line-height: 1.35; max-width: 940px;
   }
-  .paper .meta { font-size: 14.5px; color: var(--faint); margin: 0 0 8px; }
+  .paper .meta {
+    font-size: 14.5px; color: var(--faint); margin: 0 0 8px; max-width: 940px;
+    display: flex; align-items: baseline; justify-content: space-between; gap: 14px;
+  }
+  .paper .meta .m-left { flex: 1 1 auto; min-width: 0; }
   .paper .meta .status { color: var(--accent); font-weight: 600; }
   .paper .meta .pdf-link {
     display: inline-block; color: var(--accent); font-weight: 600; font-size: 12px;
@@ -216,11 +220,15 @@
   .report { margin-bottom: 24px; max-width: 940px; }
   .report:last-child { margin-bottom: 0; }
   .report .r-title { font-family: "Source Serif 4", Georgia, serif; font-size: 18px; font-weight: 600; line-height: 1.4; }
-  .report .r-meta { color: var(--muted); font-size: 14.5px; margin: 2px 0 0; }
+  .report .r-meta {
+    color: var(--muted); font-size: 14.5px; margin: 3px 0 0; max-width: 940px;
+    display: flex; align-items: baseline; justify-content: space-between; gap: 14px;
+  }
+  .report .r-meta .m-left { flex: 1 1 auto; min-width: 0; }
   .report .rbtn {
     display: inline-block; font-size: 12px; font-weight: 600; letter-spacing: .4px;
     color: var(--accent); border: 1px solid var(--accent); border-radius: 3px;
-    padding: 2px 12px; margin-top: 9px;
+    padding: 2px 12px; flex: none;
     transition: background .15s ease, color .15s ease;
   }
   .report .rbtn:hover { background: var(--accent); color: #fff; text-decoration: none; }
@@ -291,7 +299,7 @@
 
       <div class="paper">
         <h3>Effects of Unmet Son Preference on Fertility Responses and Child Health: Evidence from South Asia</h3>
-        <p class="meta">with Leah Bevis &nbsp;·&nbsp; <span class="status">Working paper</span> &nbsp;·&nbsp; <a href="https://www.econometricsociety.org/regional-activities/conference-papers/view/292/1104" target="_blank" rel="noopener" class="pdf-link">Paper</a></p>
+        <p class="meta"><span class="m-left">with Leah Bevis &nbsp;·&nbsp; <span class="status">Working paper</span></span><a href="https://www.econometricsociety.org/regional-activities/conference-papers/view/292/1104" target="_blank" rel="noopener" class="pdf-link">Paper</a></p>
         <details class="abstract-toggle">
           <summary>Abstract</summary>
           <p>This paper provides a unified, cross-country assessment of how unmet son preference shapes fertility and child health across South Asia, leveraging quasi-random variation in firstborn sex. First, we show that son preference, activated by a firstborn daughter, reduces contraceptive use, shortens birth intervals, and reduces breastfeeding duration. These responses are pronounced in India, Nepal, and Pakistan but substantially weaker in Bangladesh. Second, we show that son preference also affects child health, with estimates concentrated in India. Second-born girls with an older sister are shorter and lighter than those with an older brother, while second-born boys with an older sister are taller and heavier. Third, we document asymmetric survival responses consistent with activated son preference: girls&rsquo; survival is unaffected, but boys born after a sister are more likely to survive. Overall, the findings suggest that unmet son preference continues to shape fertility behavior and generate unequal child health outcomes.</p>
@@ -301,7 +309,7 @@
 
       <div class="paper">
         <h3>Does Trade Stabilize Food Prices Evenly During a Supply Shock? Evidence from India&rsquo;s Pulses Market</h3>
-        <p class="meta">with Ian Sheldon &nbsp;·&nbsp; <span class="status">Working paper</span> &nbsp;·&nbsp; <a href="https://ageconsearch.umn.edu/record/404639/?v=pdf" target="_blank" rel="noopener" class="pdf-link">Paper</a></p>
+        <p class="meta"><span class="m-left">with Ian Sheldon &nbsp;·&nbsp; <span class="status">Working paper</span></span><a href="https://ageconsearch.umn.edu/record/404639/?v=pdf" target="_blank" rel="noopener" class="pdf-link">Paper</a></p>
         <details class="abstract-toggle">
           <summary>Abstract</summary>
           <p>Developing countries often rely on trade policy to stabilize food prices during supply disruptions, yet the spatial distribution of these benefits remains poorly understood. This paper studies India&rsquo;s 2015&ndash;2016 pulses crisis, when consecutive domestic production shortfalls sharply raised pulses prices and triggered a surge in imports. We examine whether internal trade frictions generated uneven price relief across domestic markets. Using a district-level panel of wholesale pulses prices from 2009 to 2019 and a difference-in-differences design, we show that the import surge did not provide uniform price relief. During the crisis, each additional 100 kilometers from a major import port translated into about a 1.7 percent larger increase in pulses prices. A simple calibration suggests that imports lowered prices by about 11 percent near ports, but more than half of this relief had dissipated by the median district&ndash;port distance. The results suggest that while imports can moderate national price spikes, their stabilizing effects may be limited by incomplete internal market integration.</p>
@@ -311,7 +319,7 @@
 
       <div class="paper">
         <h3>Planting, Harvest, and Hope: Agricultural Production and Migration Aspirations</h3>
-        <p class="meta">with Tom Whittington &amp; Alexis Villacis &nbsp;·&nbsp; <span class="status">Under review</span> &nbsp;·&nbsp; <a href="assets/papers/Migration_Aspirations_JARE.pdf" target="_blank" rel="noopener" class="pdf-link">Paper</a></p>
+        <p class="meta"><span class="m-left">with Tom Whittington &amp; Alexis Villacis &nbsp;·&nbsp; <span class="status">Under review</span></span><a href="assets/papers/Migration_Aspirations_JARE.pdf" target="_blank" rel="noopener" class="pdf-link">Paper</a></p>
         <details class="abstract-toggle">
           <summary>Abstract</summary>
           <p>This paper examines how seasonal variation in agricultural production shapes migration aspirations among rural households in Nigeria. Drawing on rich household panel data from the 2023&ndash;2024 wave of the Nigeria General Household Survey Panel (GHS Panel), we exploit within-season variation in harvest outcomes and migration intentions to estimate the short-run behavioral response to realized agricultural productivity. Our findings reveal a robust inverted U-shaped relationship: migration aspirations initially rise with improvements in harvest value but decline once households reach higher levels of productivity. This non-monotonic pattern reflects the joint influence of rising capability and diminishing incentive to migrate. Further analysis identifies food insecurity as a key moderating mechanism. Households experiencing moderate-to-severe food insecurity are significantly more responsive to agricultural shocks, with migration aspirations rising more steeply following poor harvests. By linking food security, agricultural outcomes, and migration intentions within the same season, this study highlights the dynamic nature of rural mobility preferences in response to production-based livelihood risks.</p>
@@ -321,7 +329,7 @@
 
       <div class="paper">
         <h3>Irrigation in Transition: Changing Patterns of Groundwater Use in Nepal</h3>
-        <p class="meta">with Leah Bevis, Avinash Kishore &amp; Anton Urfels &nbsp;·&nbsp; <span class="status">Under review</span> &nbsp;&nbsp; <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7134898" target="_blank" rel="noopener" class="pdf-link">Paper</a></p>
+        <p class="meta"><span class="m-left">with Leah Bevis, Avinash Kishore &amp; Anton Urfels &nbsp;·&nbsp; <span class="status">Under review</span></span><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7134898" target="_blank" rel="noopener" class="pdf-link">Paper</a></p>
         <details class="abstract-toggle">
           <summary>Abstract</summary>
           <p>Irrigation in the Eastern Gangetic Plains is changing fast in water use and energy. Focusing on Nepal&rsquo;s Terai, we provide an updated assessment of irrigation patterns, with attention to irrigation assets, costs, and access. Three findings stand out. First, irrigation is shifting from surface water to groundwater and from diesel to electric pumps. Second, despite cheaper electric pumping and rapid grid expansion, access remains uneven, with regional differences in ownership and rental markets shaping both cost and timeliness. Third, renters face higher irrigation costs and longer delays than owners. These patterns reveal persistent disparities in irrigation access despite ongoing transitions.</p>
@@ -340,7 +348,7 @@
 
       <div class="paper">
         <h3>Political Power and Public Health: Examining the Effects of Low-Caste Representation on Child Health in India</h3>
-        <p class="meta">with Karan Shakya &amp; Jongeun Park</p>
+        <p class="meta"><span class="m-left">with Karan Shakya &amp; Jongeun Park</span></p>
         <details class="abstract-toggle">
           <summary>Abstract</summary>
           <p>In India, state election (Vidhan Sabha) results significantly impact constituencies, as state governments hold substantial power over policies and expenditures. These elections occur at the assembly level, a smaller administrative unit than districts. &ldquo;Low-caste parties,&rdquo; or political parties focused on representing marginalized groups such as Scheduled Castes (SC), Scheduled Tribes (ST), and Other Backward Classes (OBC), can run for office. Using a fuzzy regression discontinuity design and assuming close election results are quasi-random, we examine the welfare impacts when low-caste parties win elections, particularly on health outcomes, which have historically been worse for these marginalized households. We also test whether these effects are lasting or depend on subsequent elections.</p>
@@ -395,20 +403,17 @@
 
       <div class="report">
         <div class="r-title">Irrigation, Water Markets, and Agriculture in Bihar: Field Insights</div>
-        <div class="r-meta">Field scoping across four districts of Bihar, India &middot; June 2025</div>
-        <a href="assets/reports/Bihar_Scoping.pdf" target="_blank" rel="noopener" class="rbtn">Report</a>
+        <div class="r-meta"><span class="m-left">Field scoping across four districts of Bihar, India &middot; June 2025</span><a href="assets/reports/Bihar_Scoping.pdf" target="_blank" rel="noopener" class="rbtn">Report</a></div>
       </div>
 
       <div class="report">
         <div class="r-title">Institutional Roles in Irrigation Management in Nepal</div>
-        <div class="r-meta">Nepal &middot; July 2025</div>
-        <a href="assets/reports/Irrigation_in_Nepal.pdf" target="_blank" rel="noopener" class="rbtn">Report</a>
+        <div class="r-meta"><span class="m-left">Nepal &middot; July 2025</span><a href="assets/reports/Irrigation_in_Nepal.pdf" target="_blank" rel="noopener" class="rbtn">Report</a></div>
       </div>
 
       <div class="report">
         <div class="r-title">Climate Change Adaptation and Disaster Risk Reduction Plan for Agriculture and Livestock</div>
-        <div class="r-meta">Suddhodhan Rural Municipality, Kapilvastu, Nepal &middot; FAO project, 2018</div>
-        <a href="assets/reports/Nature_conservation_report.pdf" target="_blank" rel="noopener" class="rbtn">Report</a>
+        <div class="r-meta"><span class="m-left">Suddhodhan Rural Municipality, Kapilvastu, Nepal &middot; FAO project, 2018</span><a href="assets/reports/Nature_conservation_report.pdf" target="_blank" rel="noopener" class="rbtn">Report</a></div>
       </div>
     </section>
 
