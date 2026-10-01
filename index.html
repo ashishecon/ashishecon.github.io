@@ -152,6 +152,16 @@
     color: var(--accent); font-weight: 600; font-size: 15px;
     letter-spacing: .1px;
   }
+  .dept-link {
+    font-weight: 600; color: var(--accent);
+    border-bottom: 1px solid rgba(122,34,49,0.32);
+    transition: border-color .15s ease, background .15s ease;
+  }
+  .dept-link:hover {
+    text-decoration: none;
+    border-bottom-color: var(--accent);
+    background: rgba(122,34,49,0.07);
+  }
   p.lead { font-size: 17px; color: #33363c; margin: 0 0 14px; max-width: 920px; }
   ul.focus-list { margin: 2px 0 0; padding-left: 22px; }
   ul.focus-list li { font-size: 17px; color: #33363c; margin-bottom: 7px; }
@@ -288,7 +298,7 @@
     <!-- ABOUT -->
     <section class="about reveal" id="about">
       <h2>About</h2>
-      <p class="lead">I am a Ph.D. candidate in Agricultural, Environmental, and Development Economics at The Ohio State University. I study why inequalities persist and how they shape household welfare and development outcomes. I am also interested in international trade and the role of agriculture in rural livelihoods.</p>
+      <p class="lead">Hello, and welcome! I am a Ph.D. candidate in <a class="dept-link" href="https://aede.osu.edu/" target="_blank" rel="noopener">Agricultural, Environmental, and Development Economics at The Ohio State University</a>. I study why inequalities persist and how they shape household welfare and development outcomes. I am also interested in international trade and the role of agriculture in rural livelihoods.</p>
       <p class="lead">Beyond research, I find real joy in teaching. I have independently taught undergraduate Data Analysis, served as a lab instructor and teaching assistant in the United States, and taught at a government school in the remote hills of Nepal.</p>
       <p class="lead">Before economics, I studied agriculture, and I&rsquo;ve kept a soft spot for plants ever since. Weekends, though, belong to Manchester United.</p>
     </section>
