@@ -6,6 +6,9 @@
 <title>Fieldwork | Ashish Adhikari</title>
 <meta name="description" content="Fieldwork by Ashish Adhikari: household surveys, focus group discussions, and interviews across rural Nepal and Bihar, India." />
 <link rel="canonical" href="https://ashish-adhikari.com/fieldwork.html" />
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png" />
+<link rel="apple-touch-icon" href="apple-touch-icon.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -60,7 +63,11 @@
   }
   nav .links a.active { color: var(--accent); font-weight: 600; border-bottom-color: var(--accent); }
   nav .links a:hover { color: var(--accent); text-decoration: none; }
-  @media (max-width: 560px) { nav .wrap { padding: 14px 24px; } nav .links { gap: 16px; font-size: 14px; } }
+  @media (max-width: 560px) {
+    nav .wrap { padding: 13px 16px; justify-content: center; }
+    nav .name { display: none; }  /* page title already shows the name; frees room so every link fits */
+    nav .links { gap: 20px; font-size: 14.5px; }
+  }
 
   /* ---- Page ---- */
   .page { max-width: var(--maxw); margin: 0 auto; padding: 50px 40px 90px; }
