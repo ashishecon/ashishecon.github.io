@@ -230,9 +230,11 @@
   details.abstract-toggle p { font-size: 16px; color: var(--muted); margin: 8px 0 0; max-width: 920px; }
 
   /* ---- Teaching ---- */
-  .course { margin-bottom: 28px; max-width: 940px; }
-  .course:last-child { margin-bottom: 0; }
-  .course .c-title { font-weight: 600; font-size: 16.5px; line-height: 1.45; }
+  /* same rhythm as the paper list: thin rule between entries */
+  .course { margin: 0; padding: 20px 0; border-top: 1px solid var(--rule); max-width: 940px; }
+  .course:first-of-type { border-top: none; padding-top: 2px; }
+  .course:last-child { padding-bottom: 2px; }
+  .course .c-title { font-family: "Source Serif 4", Georgia, serif; font-weight: 600; font-size: 18px; line-height: 1.35; }
   .course .c-org { color: var(--muted); font-style: italic; font-size: 15px; margin-top: 2px; }
   .course .c-meta { list-style: none; margin: 9px 0 0; padding: 0; }
   .course .c-meta li { font-size: 15px; color: var(--muted); margin-bottom: 5px; padding-left: 16px; position: relative; }
@@ -402,12 +404,13 @@
       <h2>Teaching</h2>
 
       <div class="course">
-        <div class="p-head"><div class="c-title">Lead Instructor &mdash; Data Analysis for Agribusiness &amp; Applied Economics (AEDE 2005)</div><a href="assets/AEDE_2005_Spring_2026_syllabus__Condensed_.pdf" target="_blank" rel="noopener" class="pdf-link">Condensed syllabus</a></div>
+        <div class="c-title">Lead Instructor &mdash; Data Analysis for Agribusiness &amp; Applied Economics (AEDE 2005)</div>
         <div class="c-org">Department of Agricultural, Environmental &amp; Development Economics, The Ohio State University</div>
         <ul class="c-meta">
           <li>Spring 2026 &middot; Undergraduate &middot; 14 students</li>
           <li><b>Responsibilities:</b> Course design, lecture delivery, and conducting exams</li>
           <li><b>Student evaluation:</b> 4.75/5.0 overall &middot; 9.6/10 teaching effectiveness &middot; 4.9/5.0 availability &amp; support</li>
+          <li><b>Syllabus:</b> <a href="assets/AEDE_2005_Spring_2026_syllabus__Condensed_.pdf" target="_blank" rel="noopener">Condensed syllabus (PDF)</a></li>
         </ul>
       </div>
 
@@ -425,7 +428,8 @@
         <div class="c-title">Graduate Teaching Assistant &mdash; Intermediate Economic Principles (AAEC 3580)</div>
         <div class="c-org">Department of Agricultural &amp; Applied Economics, University of Georgia</div>
         <ul class="c-meta">
-          <li>Fall 2021 &middot; Led weekly recitations on core microeconomics for 48 undergraduates.</li>
+          <li>Fall 2021 &middot; Undergraduate &middot; 48 students</li>
+          <li><b>Responsibilities:</b> Led weekly recitations on core microeconomics</li>
         </ul>
       </div>
 
@@ -433,7 +437,8 @@
         <div class="c-title">Instructor &mdash; Agricultural Economics</div>
         <div class="c-org">Shree Tribhuwan Model Secondary School, Baglung, Nepal</div>
         <ul class="c-meta">
-          <li>2019&ndash;2020 &middot; Taught Agricultural Economics to secondary students (Grades 9&ndash;12).</li>
+          <li>2019&ndash;2020 &middot; Grades 9&ndash;12</li>
+          <li><b>Responsibilities:</b> Taught agricultural economics to secondary students</li>
         </ul>
       </div>
     </section>
